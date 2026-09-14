@@ -77,23 +77,7 @@
   }
 
   /* ---- grain ---- */
-  .grain{position:fixed; inset:0; pointer-events:none}
-  .grain::before,
-  .grain::after{
-    content:"";
-    position:absolute; inset:0;
-    background-repeat:repeat;
-  }
-  .grain::before{
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
-    opacity:var(--grain);
-    mix-blend-mode:overlay;
-  }
-  .grain::after{
-    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.34' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23b)'/%3E%3C/svg%3E");
-    opacity:var(--grain-soft);
-    mix-blend-mode:soft-light;
-  }
+  
 
   /* night depth, sits above the grain so shadows stay dense */
   .deepen{
@@ -207,7 +191,6 @@
   <div class="sky" role="img" aria-label="Sky at dusk above the Upper East Side"></div>
   <div class="wash" aria-hidden="true"></div>
   <div class="scrim" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
   <div class="deepen" aria-hidden="true"></div>
 
   <div class="frame">
